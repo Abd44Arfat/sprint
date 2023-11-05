@@ -1,0 +1,3 @@
+class NoData {
+  const NoData();
+}
