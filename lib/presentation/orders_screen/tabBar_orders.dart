@@ -1,3 +1,4 @@
+import 'package:actvex/presentation/orders_screen/pages/currently_order_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/common/components/widgets/my_text.dart';
@@ -38,7 +39,7 @@ class _TabBarPageState extends State<TabBarPage>
   Widget build(BuildContext context) {
     return Scaffold(
 
-      backgroundColor: Color(0xff141415),
+      backgroundColor: AppColors.background,
 
       appBar: AppBar(
         elevation: 0,
@@ -100,7 +101,7 @@ class _TabBarPageState extends State<TabBarPage>
                   child: TabBarView(
                     controller: tabController,
                     children: [
-                      Container(),
+                      CurrentlyOrderScreen(),
                       Container(),
                     ],
                   ),

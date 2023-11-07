@@ -24,7 +24,7 @@ class AnalysisScreen extends StatelessWidget {
 
 
       ),
-      body: AnalysisScreenBody(),
+      body: DonutChart(),
 
     );
   }

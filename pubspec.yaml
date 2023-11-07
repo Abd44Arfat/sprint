@@ -69,8 +69,8 @@ dependencies:
   feather_icons:
   flutter_feather_icons:
   device_preview:
-  status_change: 
-
+  timeline_tile: ^2.0.0
+  fl_chart: ^0.64.0
   pin_code_fields: ^8.0.1
 
 dev_dependencies:

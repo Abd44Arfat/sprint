@@ -24,7 +24,7 @@ class OrderDetailsScreen extends StatelessWidget {
 
 
       ),
-      body: orderDetails(),
+      body: OrderDetailsBody(),
 
     );
   }

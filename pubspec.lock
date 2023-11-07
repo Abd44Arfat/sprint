@@ -401,6 +401,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
+  fl_chart:
+    dependency: "direct main"
+    description:
+      name: fl_chart
+      sha256: "6b9eb2b3017241d05c482c01f668dd05cc909ec9a0114fdd49acd958ff2432fa"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.64.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -1178,14 +1186,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.0"
-  status_change:
-    dependency: "direct main"
-    description:
-      name: status_change
-      sha256: "6858b2e65c52e782da608b7291ae53d0431317a671d4718d81b63033c1d924c3"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.0"
   stream_channel:
     dependency: transitive
     description:
@@ -1234,6 +1234,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.0"
+  timeline_tile:
+    dependency: "direct main"
+    description:
+      name: timeline_tile
+      sha256: "85ec2023c67137397c2812e3e848b2fb20b410b67cd9aff304bb5480c376fc0c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   timezone:
     dependency: transitive
     description:

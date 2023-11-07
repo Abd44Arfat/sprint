@@ -1,32 +1,31 @@
-import 'package:flutter/cupertino.dart';
+import 'package:actvex/presentation/order_deatails/widgets/my_timeline_tile.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:timeline_tile/timeline_tile.dart';
 
-class orderDetails extends StatelessWidget {
-  const orderDetails({super.key});
+class OrderDetailsBody extends StatefulWidget {
+  const OrderDetailsBody({super.key});
 
   @override
+  State<OrderDetailsBody> createState() => _OrderDetailsState();
+}
+
+class _OrderDetailsState extends State<OrderDetailsBody> {
+  @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
+    return Scaffold(
 
-        Stack(
-          children: [
-            SvgPicture.asset('assets/images/Vector.svg'),
+      body: ListView(
 
-            Positioned(
-              top: 20,
+children: [
 
-              child: SvgPicture.asset('assets/images/truestatus.svg'),
-            )
+MyTimeLineTile(isFirst: true, isLast: false, isPast: true,eventCard: Text('dsvd'),),
+MyTimeLineTile(isFirst: false, isLast: false, isPast: true,eventCard: Text('dsfwevd'),),
+MyTimeLineTile(isFirst: false, isLast: true, isPast: false,eventCard: Text('dsewfvwvd'),),
+],
 
-          ],
-
-
-        ),
-
-      ],
+      ),
     );
+  }
+}
 
-
-  }}
