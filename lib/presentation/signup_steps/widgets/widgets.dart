@@ -5,6 +5,8 @@ import 'package:actvex/core/resources/colors_manager.dart';
 import 'package:actvex/core/resources/localization/app_localizations_setup.dart';
 import 'package:actvex/core/resources/strings_manager.dart';
 import 'package:actvex/core/resources/theme/app_theme.dart';
+import 'package:actvex/presentation/check_out/pages/check_products/check_products.dart';
+import 'package:actvex/presentation/check_out/pages/check_products/widgets/check_pproducts_body.dart';
 import 'package:actvex/presentation/signup_steps/cubit/signup_steps_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

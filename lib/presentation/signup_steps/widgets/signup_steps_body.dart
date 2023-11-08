@@ -9,53 +9,18 @@ class SignupStepsBody extends StatelessWidget {
       builder: (context, state) {
         final cubit = SignupStepsCubit.get(context);
         return SafeArea(
-          child: SingleChildScrollView(
-            child: SizedBox(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.w),
-                    child: Column(
-                      children: [
-                        const SignupStepsTitle(),
-                        SizedBox(height: 10.h),
-                        const SignupStepsSubTitle(),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 30.h),
-                  Flexible(
-                    child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16.w),
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(8.r),
-                          topLeft: Radius.circular(8.r),
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          SizedBox(height: 40.h),
-                          const StepperWidget(),
-                          SizedBox(height: 30.h),
-                          if (cubit.stepIndex == 0)
-                            const FirstSepWidget()
-                          else
-                            const SecondStepWidget(),
-                          SizedBox(height: 24.h),
-                          const SignupStepsContinueButton(),
-                          SizedBox(
-                            height: MediaQuery.sizeOf(context).height / 5,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                SizedBox(height: 20.h),
+                const StepperWidget(),
+              if (cubit.stepIndex == 0) 
+            Expanded(child: CheckProductsScreen())
+                else
+            Expanded(child: CheckProductsScreen()),
+              
+              ],
             ),
           ),
         );

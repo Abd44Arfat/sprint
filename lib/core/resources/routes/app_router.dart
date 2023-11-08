@@ -2,7 +2,6 @@
 import 'package:actvex/presentation/root_app/pages/productDetails/product_screen.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../presentation/create_new_password/create_new_password_screen.dart';

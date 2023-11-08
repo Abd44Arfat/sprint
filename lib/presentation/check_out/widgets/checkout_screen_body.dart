@@ -1,6 +1,8 @@
 import 'package:actvex/core/resources/colors_manager.dart';
 import 'package:actvex/presentation/Address_user/user_address.dart';
 import 'package:actvex/presentation/Categories_screen/Categories_Screen.dart';
+import 'package:actvex/presentation/check_out/check_out_screen.dart';
+import 'package:actvex/presentation/check_out/pages/check_products/check_products.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutBody extends StatefulWidget {
@@ -15,10 +17,10 @@ class _CustomStepperState extends State<CheckoutBody> {
   PageController _pageController = PageController();
 
   final List<Widget> pages = [
-    CategoriesScreen(), // Replace with your first page widget
+    CheckProductsScreen(), // Replace with your first page widget
     UserAddress(), // Replace with your second page widget
     CategoriesScreen(), // Replace with your third page widget
-    UserAddress(), // Replace with your fourth page widget
+    CheckProductsScreen(), // Replace with your fourth page widget
   ];
 
   @override
@@ -240,7 +242,7 @@ class StepperComponent extends StatelessWidget {
                       //why index+1 we want to turn the ligne orange that precede the active bubble
                       color: currentIndex >= index + 1
                           ? AppColors.primaryColor
-                          : Colors.black12,
+                          : Colors.white,
                     )),
                   ],
                 ),

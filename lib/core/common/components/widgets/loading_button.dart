@@ -7,7 +7,7 @@ import '../utils/custom_button_animation.dart';
 import 'my_text.dart';
 
 class LoadingButton extends StatelessWidget {
-  final GlobalKey<CustomButtonState> btnKey;
+  final GlobalKey<CustomButtonState> ?btnKey;
   final String title;
   final Function() onTap;
   final Color? textColor;
@@ -35,7 +35,7 @@ class LoadingButton extends StatelessWidget {
     this.width,
     this.height,
     this.fontWeight,
-    required this.btnKey,
+     this.btnKey,
   });
 
   @override

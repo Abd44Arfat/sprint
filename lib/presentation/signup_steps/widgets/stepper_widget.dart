@@ -9,15 +9,39 @@ class StepperWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CircleAvatar(
-          backgroundColor: AppColors.primaryColor,
-          radius: 16.r,
-          child: MyText(
-            '1',
-            textStyle: TextStyleEnum.poppinsMedium,
-            fontSize: 18.sp,
-            color: Colors.white,
-          ),
+        Stack(
+          children: [
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                color: AppColors.primaryColor,
+                border: Border.all(color: AppColors.primaryColor),
+              ),
+            ),
+            // Shadow container placed above the first container
+            Positioned(
+              top: 10,
+              left: 10,
+              child: Container(
+                width: 20,
+                height: 20,
+                decoration: ShapeDecoration(
+                  color: Color.fromARGB(255, 253, 253, 253),
+                  shape: const CircleBorder(),
+                  shadows: [
+                    BoxShadow(
+                      color: Color(0x4C111012),
+                      blurRadius: 3,
+                      offset: Offset(0, 2),
+                      spreadRadius: 0,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
         Expanded(
           child: Container(
@@ -28,17 +52,42 @@ class StepperWidget extends StatelessWidget {
         ),
         BlocBuilder<SignupStepsCubit, SignupStepsState>(
           builder: (context, state) {
-            return CircleAvatar(
-              backgroundColor: SignupStepsCubit.get(context).stepIndex == 1
-                  ? AppColors.primaryColor
-                  : AppColors.unreachedStepBgColor,
-              radius: 16.r,
-              child: MyText(
-                '2',
-                textStyle: TextStyleEnum.poppinsMedium,
-                fontSize: 18.sp,
-                color: Colors.white,
-              ),
+            return Stack(
+              children: [
+             Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color:  SignupStepsCubit.get(context).stepIndex == 1?  AppColors.primaryColor:AppColors.white,
+                    border: Border.all(color: AppColors.primaryColor),
+                  ),
+                ),
+                // Shadow container placed above the first container
+              Positioned(
+                  top: 10,
+                  left: 10,
+                  child: Container(
+                    width: 20,
+                    height: 20,
+                    decoration: ShapeDecoration(
+                      color: Color.fromARGB(255, 253, 253, 253),
+                      shape: const CircleBorder(),
+                      shadows: [
+                        BoxShadow(
+                          color: Color(0x4C111012),
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                          spreadRadius: 0,
+                        ),
+                      ],
+                    ),
+                  ),
+
+
+                  
+                ),
+              ],
             );
           },
         ),

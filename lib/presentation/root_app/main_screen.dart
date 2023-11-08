@@ -1,9 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:actvex/presentation/Address_user/user_address.dart';
 import 'package:actvex/presentation/Categories_screen/Categories_Screen.dart';
+import 'package:actvex/presentation/cart/cart_screen.dart';
 import 'package:actvex/presentation/check_out/check_out_screen.dart';
 import 'package:actvex/presentation/root_app/pages/anlysis_screen/analysis_screen.dart';
 import 'package:actvex/presentation/root_app/pages/products_screen/home_screen.dart';
+import 'package:actvex/presentation/signup_steps/signup_steps_screen.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +26,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> screens = [
     HomeScreen(),
-    AnalysisScreen(),
+    SignupStepsScreen(),
     OrderDetailsScreen(),
     CheckoutScreen(),
     CategoriesScreen(),
