@@ -1,3 +1,4 @@
+import 'package:actvex/presentation/signup_steps/cubit/signup_steps_cubit.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,6 +24,7 @@ void main() async {
         BlocProvider(
           create: (_) => ChangeLanguageCubit(),
         ),
+        BlocProvider<SignupStepsCubit>(create: (context) => SignupStepsCubit()),
       ],
       child: DevicePreview(
         enabled: true,

@@ -8,20 +8,18 @@ class SignupStepsBody extends StatelessWidget {
     return BlocBuilder<SignupStepsCubit, SignupStepsState>(
       builder: (context, state) {
         final cubit = SignupStepsCubit.get(context);
-        return SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              children: [
-                SizedBox(height: 20.h),
-                const StepperWidget(),
-              if (cubit.stepIndex == 0) 
-            Expanded(child: CheckProductsScreen())
-                else
-            Expanded(child: CheckProductsScreen()),
-              
-              ],
-            ),
+        return Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              SizedBox(height: 20.h),
+              const StepperWidget(),
+            if (cubit.stepIndex == 0) 
+          Expanded(child: CheckProductsScreen())
+              else
+                        Expanded(child: ChoosePaymentAndAddressBody())
+
+            ],
           ),
         );
       },
